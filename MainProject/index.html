@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    main{
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(90deg, purple, darkblue);
+        position: relative;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        overflow-y: scroll;
+    }
+    #main1{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    #home{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    #menu{
+        width: 100%;
+        height: 40px;
+        background-color: rgba(0, 0, 0, 0.317);
+        position: absolute;
+        top: 0;
+        left: 0;
+        position: fixed;
+        z-index: 1;
+        transform: .2s;
+    }
+    .menuscroll{
+        height: 80px !important;
+        background-color: rgba(0, 0, 0, 0.752) !important;
+    }
+    #menu>ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #menu>ul>li{
+        width: 30%;
+        height: 100%;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #menu>ul>li>a{
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.459);
+        text-decoration: none;
+        transition: .2s;
+    }
+    #menu>ul>li>a:hover{
+        color: white;
+    }
+    #slider{
+        width: 1000px;
+        height: 480px;
+        border: 3px solid rgba(128, 128, 128, 0.593);
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+    }
+    #img{
+        height: 100%;
+        display: flex;
+        transition: .2s;
+    }
+    #img>figure{
+        width: 1000px;
+        height: 100%;
+        position: relative;
+    }
+    #img>figure>img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+    }
+    #img>figure>figcaption{
+        color: white;
+        background-color: rgba(0, 0, 139, 0.547);
+        position: absolute;
+        font-size: 15px;
+        padding: 5px;
+        bottom: 0;
+        left: 0;
+    }
+    #bottom{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;left: 0;
+    }
+    span{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: darkblue;
+        border: 2px solid darkblue;
+        margin-left: 10px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        transition: .2s;
+    }
+    span:first-child{
+        background-color: purple;
+    }
+    span:hover{
+        width: 35px;
+        height: 10px;
+        border-radius: 5px 5px 5px 5px;
+    }
+    #main3{
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #terms{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    #condition{
+        width: 500px;
+        height: 400px;
+        background-color: white;
+    }
+    #tc{
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        padding: 50px;
+    }
+    #but{
+        margin-top: 10px;
+    }
+    #but>button{
+        cursor: pointer;
+        margin-left: 5px;
+    }
+
+
+</style>
+<body>
+    <main>
+
+        <!-- menu start  -->
+
+        <div id="main1">
+            <a href="" id="home"></a>
+            <div id="menu">
+                <ul>
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#terms">Terms & Condition</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- end of menu -->
+
+            <!-- slider start  -->
+    
+            <div id="slider">
+                <div id="img">
+                    <figure>
+                        <img src="img/deutschland.jpeg" alt="">
+                        <figcaption>Deutschland</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/swiss.jpeg" alt="">
+                        <figcaption>Switzerland</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/golestan.jpg" alt="">
+                        <figcaption>Golestan palace in Tehran</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/Tehran.jpg" alt="">
+                        <figcaption>Lovely Tehran</figcaption>
+                    </figure>
+                </div>
+                <div id="bottom"></div>
+            </div>
+        </div>
+
+        <!-- end of slider  -->
+
+        <!-- terms start -->
+        
+        <div id="main3">
+            <a href="" id="terms"></a>
+            <div id="condition">
+                <div id="tc">
+                    <p id="_p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus voluptatibus porro, nostrum totam ipsa quia expedita. Rerum recusandae numquam quam ducimus eos amet soluta porro aliquam impedit? Non placeat deserunt voluptatibus maiores, nulla facilis fugit quibusdam beatae excepturi voluptatum suscipit quae ex veniam, vel labore nobis, dolorum delectus quo dolorem qui nemo. Tempore quos ab repellendus dolore excepturi nemo, odit assumenda sequi a sint facilis sapiente minus quo dolores dolor dicta explicabo nam maxime accusantium voluptate delectus minima. Sint, consequatur! Fugit voluptate omnis natus inventore recusandae ipsam. Eveniet doloribus provident illum quaerat aliquid autem, numquam quo maiores dolores quos aliquam, officiis expedita placeat dolorum ipsa harum eaque repellendus? Placeat commodi temporibus velit blanditiis libero corrupti pariatur qui ipsa porro sed, esse, optio explicabo quidem! Reiciendis quas totam officiis debitis animi sed dignissimos obcaecati, ullam quasi adipisci expedita doloribus soluta error neque iste similique eius odit maxime eveniet facilis est quis vel! Ipsum tempora incidunt eligendi illo odio consequatur hic minima? Repellendus ratione doloribus assumenda sint ipsum sunt quo quia expedita voluptate? Quas, minima quaerat unde nostrum tempore ipsa in. Blanditiis quod quibusdam eligendi, molestiae pariatur maiores veritatis adipisci quasi corrupti. Atque, magni quae. Aut maiores vitae reiciendis error reprehenderit ad sint sunt, beatae excepturi dicta eos sequi officia voluptatibus quod dolor veritatis iste perferendis molestias odio, fuga ipsam assumenda? Saepe dolorum impedit dolores facere, dignissimos porro odit, illum ea corrupti ipsam minima deleniti quo iure, doloremque illo dolorem eos aliquam voluptas excepturi quidem sint necessitatibus ipsum ducimus. Nihil esse in consequatur ipsum. Eveniet fuga blanditiis earum ea qui aspernatur porro rerum ipsam maxime molestiae optio dolorum enim dolores asperiores laboriosam nam similique repellat accusamus sint, repellendus inventore. Vitae facere, iure at quaerat earum excepturi nulla numquam esse dolores sed libero ex quam consectetur repellat laudantium quidem quasi quod, itaque, odit nisi autem omnis voluptatem aperiam. Laboriosam molestias nihil obcaecati blanditiis quod officiis laudantium nam. Asperiores iure quisquam voluptate voluptatibus ullam rem deserunt molestiae nihil odit recusandae dignissimos, maiores tempore odio eos cumque et perspiciatis exercitationem blanditiis distinctio dolorem molestias reiciendis est adipisci. Maxime qui quia ratione, quam doloribus, velit rem amet natus quasi, animi repellendus atque modi. Quisquam laudantium repudiandae labore, iste amet ratione, autem molestiae ea dolores mollitia inventore fugit exercitationem quaerat ullam? Laboriosam quod hic corporis nulla iusto ipsam ex quam sint. Ipsam provident debitis neque ab totam dolore quis quaerat deleniti mollitia inventore aperiam esse, doloribus quisquam? Repellendus quos quas impedit. Id atque vero illo eveniet blanditiis deserunt assumenda consequatur tempore. Quod minima, officiis quis dolor, aspernatur tempore ducimus repellat libero nulla maiores quos veritatis voluptate nisi vitae minus! Ipsum ducimus commodi accusamus. Atque facere tempore sint voluptatum repudiandae, iste exercitationem fugit, dolor voluptate unde consectetur labore, dicta optio corrupti! Ab libero explicabo dolor autem doloribus dignissimos, quasi error non placeat, fugiat deserunt vero asperiores quos officiis architecto sapiente dicta, doloremque laboriosam? Esse, animi adipisci culpa necessitatibus voluptatem repellat quo. Repellendus ex pariatur quia maxime sequi nam beatae reiciendis, fuga molestiae, dicta veritatis nesciunt ducimus id iusto accusamus aspernatur dignissimos, ipsum harum minus quasi voluptatibus molestias ipsam! Accusantium exercitationem corporis distinctio. Officiis explicabo corporis minus esse sapiente perspiciatis quisquam quasi tenetur consequatur sed corrupti illum neque nulla harum non, pariatur et laborum error officia assumenda eum in nemo molestiae? Quod pariatur a incidunt vel delectus ipsam nam inventore sunt, quaerat nostrum aliquam praesentium aperiam voluptate? Culpa suscipit corrupti assumenda laboriosam, quaerat animi ab repudiandae earum debitis sunt repellendus nam vel dolore quos dolor eius vitae aspernatur nisi deleniti quo nesciunt, illum accusamus explicabo. Odio praesentium obcaecati facilis voluptate soluta consequatur quas dolorem fugit incidunt possimus repellendus atque, maiores nesciunt adipisci quo id labore inventore quibusdam esse consequuntur aut, natus perferendis! Minus quisquam nulla aperiam ducimus ut dicta saepe praesentium, illum culpa aut atque facilis cupiditate. Illum amet fugit magnam consequatur laudantium tempore soluta accusamus ipsam perspiciatis earum expedita quis, ratione eum assumenda dicta unde iusto. Quos cupiditate veritatis ut delectus eligendi optio. Repellendus optio beatae laborum odio deserunt ratione quo expedita! Sunt odit rerum at eaque ea illo quibusdam cumque rem deleniti quo suscipit, incidunt expedita fugit fuga ex natus eius quisquam perspiciatis dolor nam. Tenetur maxime enim fuga suscipit, ipsam atque esse soluta ad accusamus ab accusantium sequi expedita quidem ipsa temporibus quisquam, provident nihil repudiandae sit facere? Labore cum, nihil harum perspiciatis, ducimus sed facere accusamus quam ex minus unde possimus pariatur odio earum doloribus. Quibusdam expedita minima error nostrum possimus illo. Fugiat quaerat rerum, vitae, repudiandae hic saepe pariatur itaque, omnis repellat mollitia quod provident. Sequi laborum repellendus, nesciunt nostrum eveniet, accusamus tenetur, unde consequuntur ea impedit minima! Incidunt fuga voluptatem quasi repellendus quas, laborum doloremque adipisci modi dolorem suscipit natus esse doloribus debitis reiciendis repellat ipsa explicabo earum impedit vitae, corporis, iste culpa. Tempore totam excepturi vel error ratione aliquam, officia reprehenderit aliquid illo, eum eveniet dolores! Unde quasi doloremque id ad aperiam, tempore voluptas tempora praesentium culpa eaque totam, at temporibus quia nisi sunt ipsum quibusdam, nam ipsa ex voluptate. Quia neque laborum expedita. Sint, quam! Odit quod fugit, quis alias nesciunt vitae porro id commodi? Officia delectus distinctio sequi recusandae ab sed mollitia blanditiis at hic. Vel nihil aperiam dolor vero delectus tempore, quos maiores perferendis non mollitia facilis repellat, corrupti velit rerum accusamus architecto a minima esse. Maiores vel saepe odio, laudantium fuga fugit facere beatae accusamus illum quaerat! Sapiente modi consequatur perferendis ab, cupiditate culpa tempora maxime officiis aspernatur assumenda cum excepturi libero vel neque. Sapiente, asperiores explicabo! Eos laborum culpa, impedit ad neque dignissimos perspiciatis optio consequatur nulla. Quo dolore dolorem, tempora pariatur, velit sapiente incidunt molestias explicabo expedita veniam, praesentium numquam sed eos nulla consectetur debitis facilis sint doloribus corrupti error aliquid culpa vitae! Cupiditate, nemo. Suscipit est quisquam asperiores reiciendis modi quod rerum, minima accusantium pariatur sint qui optio dolorem nisi ab eveniet nobis quia aut, inventore expedita architecto in omnis porro veritatis rem! Enim molestiae cum architecto consequatur possimus numquam eius sed ratione. Ad dolorum vero aliquam error alias itaque, temporibus minus. Distinctio, assumenda est.</p>
+                </div>
+                <div id="but">
+                    <input type="checkbox" disabled>
+                    <button id="_btn" disabled>accept and play</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- end of terms  -->
+
+    </main>
+</body>
+<script>
+    
+    // slider start 
+
+    let _figure = document.querySelectorAll('#img>figure')
+
+    document.getElementById('img').style.width = 1000 * _figure.length + 'px'
+
+    for(i = 0 ; i < _figure.length ; i++){       
+        let _span = document.createElement('span')
+        document.getElementById('bottom').appendChild(_span)
+    }
+  
+    let _spanSelect = document.querySelectorAll('#bottom>span')
+
+    _spanSelect.forEach(function(val, index){
+        val.addEventListener('click', function(){
+
+            for(i=0 ; i<_spanSelect.length ; i++){
+                _spanSelect[i].style.background='darkblue'
+            }
+
+            val.style.background='purple'
+            document.getElementById('img').style.transform = 'translateX(-'+index*1000+'px)'
+
+        })
+    })
+
+    // end of slider 
+
+    // menu scroll 
+
+    let _main = document.getElementsByTagName('main')[0]
+    _main.addEventListener('scroll', function(){
+        let _scrollTop = _main.scrollTop
+        if(_scrollTop > 300){
+            document.getElementById('menu').classList.add('menuscroll')
+        }else{
+            document.getElementById('menu').classList.remove('menuscroll')
+        } 
+    })
+
+    // end of menu scroll  
+
+    // terms start 
+
+    let _ph = document.getElementById('_p').clientHeight-400
+    document.getElementById('tc').addEventListener('scroll', function(){
+        let _tcst = this.scrollTop
+        console.log(_ph + '-' + _tcst)
+        if(_tcst>_ph){
+            document.getElementsByTagName('input')[0].removeAttribute('disabled')
+        }
+    })
+    document.getElementsByTagName('input')[0].addEventListener('click', function(){
+        document.getElementById('_btn').removeAttribute('disabled')
+    })
+
+    // end of terms 
+
+
+</script>
+</html>
