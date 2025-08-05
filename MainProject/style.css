@@ -1,0 +1,183 @@
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    main {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        overflow-y: scroll;
+    }
+
+    #main1 {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    #home {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #menu {
+        width: 100%;
+        height: 40px;
+        background-color: rgba(0, 0, 0, 0.317);
+        position: absolute;
+        top: 0;
+        left: 0;
+        position: fixed;
+        z-index: 1;
+        transform: .2s;
+    }
+
+    .menuscroll {
+        height: 80px !important;
+        background-color: rgba(0, 0, 0, 0.752) !important;
+    }
+
+    #menu>ul {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu>ul>li {
+        width: 30%;
+        height: 100%;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #menu>ul>li>a {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.459);
+        text-decoration: none;
+        transition: .2s;
+    }
+
+    #menu>ul>li>a:hover {
+        color: white;
+    }
+
+    #slider {
+        width: 1000px;
+        height: 480px;
+        border: 3px solid rgba(128, 128, 128, 0.593);
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    #img {
+        height: 100%;
+        display: flex;
+        transition: .2s;
+    }
+
+    #img>figure {
+        width: 1000px;
+        height: 100%;
+        position: relative;
+    }
+
+    #img>figure>img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #img>figure>figcaption {
+        color: white;
+        background-color: rgba(0, 0, 139, 0.547);
+        position: absolute;
+        font-size: 15px;
+        padding: 5px;
+        bottom: 0;
+        left: 0;
+        z-index: 1000000;
+    }
+
+    #bottom {
+        height: 28px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        background-color: #ffffff6e;
+    }
+
+    span {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: darkblue;
+        border: 2px solid darkblue;
+        margin-left: 10px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        transition: .2s;
+    }
+
+    span:first-child {
+        background-color: purple;
+    }
+
+    span:hover {
+        width: 35px;
+        height: 10px;
+        border-radius: 5px 5px 5px 5px;
+    }
+
+    #main3 {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #terms {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #condition {
+        width: 500px;
+        height: 400px;
+    }
+
+    #tc {
+        border: 1px solid gray;
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        padding: 50px;
+    }
+
+    #but {
+        margin-top: 10px;
+    }
+
+    #but>button {
+        cursor: pointer;
+        margin-left: 5px;
+    }
